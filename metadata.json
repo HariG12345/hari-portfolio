@@ -1,0 +1,8 @@
+
+{
+  "name": "Hari G Portfolio - Modern Depth",
+  "description": "A high-end personal portfolio featuring glassmorphism, 3D tilt effects, intersection observer animations, and a custom interactive cursor.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

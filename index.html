@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari G | Creative Portfolio & Developer</title>
+    <meta name="description" content="Portfolio of Hari G, an Aspiring IT Professional and React Developer. Explore my projects and technical expertise.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fredoka:wght@300..700&display=swap');
+        
+        :root {
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.5);
+            --cartoon-font: 'Fredoka', sans-serif;
+            --brand-font: 'Bungee', cursive;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        .brand-text {
+            font-family: var(--brand-font);
+        }
+
+        .cartoon-text {
+            font-family: var(--cartoon-font);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-nav.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(3, 7, 18, 0.9);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .custom-cursor {
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%233b82f6"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/></svg>') no-repeat center;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.05s linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cursor-eye {
+            width: 4px;
+            height: 4px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 8px;
+        }
+        .eye-left { left: 7px; }
+        .eye-right { right: 7px; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-cartoon {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .wiggle:hover {
+            animation: wiggle 0.5s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .bg-grid {
+            background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 8s ease-in-out infinite;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+
+        @media (max-width: 768px) {
+            .custom-cursor { display: none; }
+            body { cursor: auto; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-grid">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
