@@ -1,3 +1,4 @@
+<img src="./profilo.gif" alt="Hari G Portfolio Demo" width="100%" />
 
 ## Run Locally
 
