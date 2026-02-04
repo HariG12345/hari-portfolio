@@ -137,7 +137,7 @@ export const Hero: React.FC = () => {
 
             <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
               <img 
-                src="./components/passport__35x45_5_imresizer-removebg-preview.png" 
+                src="/passport.png" 
                 alt="Hari G" 
                 className="w-full h-full object-cover rounded-[2rem]"
                 onError={(e) => {
