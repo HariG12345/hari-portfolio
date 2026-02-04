@@ -101,7 +101,7 @@ export const Hero: React.FC = () => {
             Bridging the gap between complex engineering and delightful user interfaces. I turn coffee into code and ideas into reality.
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <button 
+            <button
               onClick={() => scrollTo('projects')}
               className="cartoon-text px-10 py-4 bg-blue-600 hover:bg-white hover:text-blue-600 rounded-2xl font-black transition-all transform hover:-translate-y-1 active:scale-95 shadow-xl shadow-blue-500/20 group"
             >
@@ -140,7 +140,9 @@ export const Hero: React.FC = () => {
                 src="./components/passport__35x45_5_imresizer-removebg-preview.png" 
                 alt="Hari G" 
                 className="w-full h-full object-cover rounded-[2rem]"
-               }
+                onError={(e) => {
+                   
+                }}
               />
             </div>
           </div>
