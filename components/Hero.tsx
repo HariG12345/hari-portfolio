@@ -138,7 +138,7 @@ export const Hero: React.FC = () => {
             <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
          <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
   <img
-    src="https://drive.google.com/uc?export=view&id=1hE8lwDDR2c1hWJ2muFl2mmf1WclY__nj"
+    src="https://raw.githubusercontent.com/HariG12345/hari-portfolio/main/public/images/passport.png"
     alt="Hari G"
     className="w-full h-full object-cover rounded-[2rem]"
   />
