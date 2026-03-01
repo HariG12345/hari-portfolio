@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Image from "next/image";
 
 export const Hero: React.FC = () => {
   const [text, setText] = useState('');
@@ -139,13 +138,11 @@ export const Hero: React.FC = () => {
          <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
   
 
-<Image
+<img
   src="https://avatars.githubusercontent.com/u/125337022?v=4"
   alt="Hari G"
-  width={300}
-  height={300}
-  className="rounded-[2rem] object-cover"
-/>
+  className="w-full h-full object-cover rounded-[2rem]"
+/>>
 
 
 
