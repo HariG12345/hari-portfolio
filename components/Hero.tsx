@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
     };
     const timer = setTimeout(handleType, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed, phrases]);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -117,36 +117,12 @@ export const Hero: React.FC = () => {
         
         <div className="flex-1 relative reveal flex justify-center">
           <div className="relative group">
-            {/* Animated Mascot */}
-            <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-28 h-28 z-30 pointer-events-none floating-cartoon">
-               <div className="relative w-full h-full flex flex-col items-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-2xl border-2 border-white flex items-center justify-center relative shadow-2xl overflow-hidden">
-                     <div className="flex gap-2">
-                        <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center relative overflow-hidden">
-                           <div ref={leftPupilRef} className="w-2.5 h-2.5 bg-black rounded-full"></div>
-                        </div>
-                        <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center relative overflow-hidden">
-                           <div ref={rightPupilRef} className="w-2.5 h-2.5 bg-black rounded-full"></div>
-                        </div>
-                     </div>
-                     <div className="absolute bottom-2.5 w-6 h-2 border-b-2 border-black rounded-full"></div>
-                  </div>
-               </div>
-            </div>
-
-        
-         <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
-  
-
-<img
-  src="https://avatars.githubusercontent.com/u/125337022?v=4"
-  alt="Hari G"
-  className="w-full h-full object-cover rounded-[2rem]"
-/>>
-
-
-
-
+            <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
+              <img
+                src="https://avatars.githubusercontent.com/u/125337022?v=4"
+                alt="Hari G"
+                className="w-full h-full object-cover rounded-[2rem]"
+              />
             </div>
           </div>
         </div>
