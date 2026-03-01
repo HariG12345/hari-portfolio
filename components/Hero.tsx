@@ -15,8 +15,13 @@ export const Hero: React.FC = () => {
     const handleType = () => {
       const i = loopNum % phrases.length;
       const fullText = phrases[i];
-      setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
+      setText(
+        isDeleting
+          ? fullText.substring(0, text.length - 1)
+          : fullText.substring(0, text.length + 1)
+      );
       setTypingSpeed(isDeleting ? 60 : 120);
+
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 1500);
       } else if (isDeleting && text === '') {
@@ -24,6 +29,7 @@ export const Hero: React.FC = () => {
         setLoopNum(loopNum + 1);
       }
     };
+
     const timer = setTimeout(handleType, typingSpeed);
     return () => clearTimeout(timer);
   }, [text, isDeleting, loopNum, typingSpeed]);
@@ -40,10 +46,10 @@ export const Hero: React.FC = () => {
             const deltaY = e.clientY - eyeCenterY;
             const angle = Math.atan2(deltaY, deltaX);
             const radius = Math.min(eyeRect.width / 4, 6);
-            
+
             const x = Math.cos(angle) * radius;
             const y = Math.sin(angle) * radius;
-            
+
             ref.current.style.transform = `translate(${x}px, ${y}px)`;
           }
         }
@@ -77,8 +83,11 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-blue-500/20 animate-bounce">
               <i className="fa-solid fa-sparkles text-yellow-400 text-xs"></i>
-              <span className="cartoon-text text-[10px] font-bold text-blue-400 uppercase tracking-tighter">Open for New Opportunities</span>
+              <span className="cartoon-text text-[10px] font-bold text-blue-400 uppercase tracking-tighter">
+                Open for New Opportunities
+              </span>
             </div>
+
             <a 
               href="https://github.com/HariG12345" 
               target="_blank" 
@@ -86,26 +95,37 @@ export const Hero: React.FC = () => {
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-white/10 hover:border-blue-500 transition-colors group"
             >
               <i className="fa-brands fa-github text-white text-xs group-hover:rotate-12 transition-transform"></i>
-              <span className="cartoon-text text-[10px] font-bold text-gray-300 uppercase tracking-tighter">@HariG12345</span>
+              <span className="cartoon-text text-[10px] font-bold text-gray-300 uppercase tracking-tighter">
+                @HariG12345
+              </span>
             </a>
           </div>
+
           <h1 className="brand-text text-5xl md:text-8xl mb-6 leading-tight text-white">
             I'M <span className="text-blue-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">HARI</span>
           </h1>
+
           <div className="cartoon-text text-2xl md:text-4xl font-semibold mb-8 h-10">
-            <span className="text-yellow-400 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">{text}</span>
+            <span className="text-yellow-400 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+              {text}
+            </span>
             <span className="animate-pulse ml-1">|</span>
           </div>
+
           <p className="text-gray-400 text-lg max-w-xl mb-10 leading-relaxed font-medium">
-            Bridging the gap between complex engineering and delightful user interfaces. I turn coffee into code and ideas into reality.
+            Bridging the gap between complex engineering and delightful user interfaces. 
+            I turn coffee into code and ideas into reality.
           </p>
+
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <button
               onClick={() => scrollTo('projects')}
               className="cartoon-text px-10 py-4 bg-blue-600 hover:bg-white hover:text-blue-600 rounded-2xl font-black transition-all transform hover:-translate-y-1 active:scale-95 shadow-xl shadow-blue-500/20 group"
             >
-              VIEW PROJECTS <i className="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              VIEW PROJECTS 
+              <i className="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </button>
+
             <button 
               onClick={() => scrollTo('contact')}
               className="cartoon-text px-10 py-4 glass rounded-2xl font-black transition-all hover:bg-white/10 active:scale-95 border border-white/10"
@@ -114,18 +134,22 @@ export const Hero: React.FC = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="flex-1 relative reveal flex justify-center">
           <div className="relative group">
+
             <div className="w-72 h-72 md:w-[420px] md:h-[420px] rounded-[2.5rem] overflow-hidden glass border-2 border-white/10 p-2 shadow-2xl relative z-10 transition-all duration-500 group-hover:border-blue-500/50">
+
               <img
                 src="https://avatars.githubusercontent.com/u/125337022?v=4"
                 alt="Hari G"
                 className="w-full h-full object-cover rounded-[2rem]"
               />
+
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
