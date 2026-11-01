@@ -129,23 +129,7 @@ export const CinematicJourney: React.FC = () => {
 
   return (
     <div className="journey-shell">
-      <style>{styles}
-/* Scroll-led cinematic chapters: each viewport is a chapter trigger while the scene stays pinned. */
-.journey-scroll-track{position:relative;z-index:0;margin-top:0;pointer-events:none}
-.journey-scroll-marker{height:100vh;max-height:980px;min-height:780px}
-.journey-scene{z-index:1}
-.chapter-intro .avatar-card{animation:campusWalk 1.2s ease both,avatarFloat 6s ease-in-out 1.2s infinite}
-.chapter-studio .avatar-card{animation:studioMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
-.chapter-projects .avatar-card{animation:projectMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
-.chapter-experience .avatar-card{animation:experienceMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
-.chapter-interview .avatar-card{animation:interviewMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
-@keyframes campusWalk{0%{transform:translate3d(80px,30px,0) rotateY(-28deg) scale(.92);opacity:.5}100%{transform:translate3d(0,0,0) rotateY(-12deg) scale(1);opacity:1}}
-@keyframes studioMove{0%{transform:translate3d(0,55px,0) rotateY(20deg) scale(.9)}100%{transform:translate3d(0,0,0) rotateY(-8deg) scale(1)}}
-@keyframes projectMove{0%{transform:translate3d(-65px,15px,0) rotateY(25deg)}100%{transform:translate3d(0,0,0) rotateY(-12deg)}}
-@keyframes experienceMove{0%{transform:translate3d(65px,0,0) rotateY(-25deg)}100%{transform:translate3d(0,0,0) rotateY(-12deg)}}
-@keyframes interviewMove{0%{transform:translate3d(0,65px,0) rotateY(0) scale(.94)}100%{transform:translate3d(0,0,0) rotateY(-12deg) scale(1)}}
-@media(max-width:800px){.journey-scene{position:relative;top:auto;margin-bottom:0;height:auto;min-height:780px}.journey-scroll-track{display:none}}
-</style>
+      <style>{styles}</style>
       <div className="journey-grain" />
       <header className="journey-nav">
         <a className="journey-logo" href="#journey-top">HARI<span>.G</span></a>
@@ -229,4 +213,20 @@ const styles = `
 @media(max-width:900px){.journey-scene{min-height:850px;height:auto;padding:140px 7vw 125px;align-items:flex-start}.scene-copy{max-width:580px}.avatar-stage{right:2vw;top:auto;bottom:65px;transform:scale(.7);transform-origin:bottom right;opacity:.72}.scene-copy{z-index:3}.chapter-strip{display:block}.chapter-strip-heading{margin-bottom:22px}.chapter-stops{overflow-x:auto;justify-content:flex-start}.chapter-stops button{min-width:150px}.interview-layout{grid-template-columns:1fr}.journey-footer{grid-template-columns:1fr}.footer-links{flex-direction:row;flex-wrap:wrap}.journey-footer>small{grid-column:auto}}
 @media(max-width:560px){.journey-nav{height:68px;padding:0 5vw}.journey-location{display:none}.journey-scene{padding:125px 6vw 170px;min-height:900px}.scene-copy h1{font-size:54px}.scene-subtitle{max-width:330px}.scene-facts{max-width:300px}.avatar-stage{right:-20px;bottom:52px;transform:scale(.55);opacity:.58}.scene-bottom{left:6vw;right:6vw;bottom:24px;gap:14px}.scene-scroll-hint{display:none}.chapter-strip{padding:32px 6vw}.interview-section{padding:70px 6vw}.interview-answer{padding:24px}.journey-footer{padding:65px 6vw 25px}}
 @media(prefers-reduced-motion:reduce){.journey-shell *{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+/* Scroll-led cinematic chapters */
+.journey-scroll-track{position:relative;z-index:0;margin-top:0;pointer-events:none}
+.journey-scroll-marker{height:100vh;max-height:980px;min-height:780px}
+.journey-scene{z-index:1}
+.chapter-intro .avatar-card{animation:campusWalk 1.2s ease both,avatarFloat 6s ease-in-out 1.2s infinite}
+.chapter-studio .avatar-card{animation:studioMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
+.chapter-projects .avatar-card{animation:projectMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
+.chapter-experience .avatar-card{animation:experienceMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
+.chapter-interview .avatar-card{animation:interviewMove 1s ease both,avatarFloat 6s ease-in-out 1s infinite}
+@keyframes campusWalk{0%{transform:translate3d(80px,30px,0) rotateY(-28deg) scale(.92);opacity:.5}100%{transform:translate3d(0,0,0) rotateY(-12deg) scale(1);opacity:1}}
+@keyframes studioMove{0%{transform:translate3d(0,55px,0) rotateY(20deg) scale(.9)}100%{transform:translate3d(0,0,0) rotateY(-8deg) scale(1)}}
+@keyframes projectMove{0%{transform:translate3d(-65px,15px,0) rotateY(25deg)}100%{transform:translate3d(0,0,0) rotateY(-12deg)}}
+@keyframes experienceMove{0%{transform:translate3d(65px,0,0) rotateY(-25deg)}100%{transform:translate3d(0,0,0) rotateY(-12deg)}}
+@keyframes interviewMove{0%{transform:translate3d(0,65px,0) rotateY(0) scale(.94)}100%{transform:translate3d(0,0,0) rotateY(-12deg) scale(1)}}
+@media(max-width:800px){.journey-scene{position:relative;top:auto;margin-bottom:0;height:auto;min-height:780px}.journey-scroll-track{display:none}}
+
 `;
